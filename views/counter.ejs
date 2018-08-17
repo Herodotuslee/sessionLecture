@@ -5,15 +5,9 @@
     <title></title>
   </head>
   <body>
-    <h3>You've visited this page - <%= count %> time(s)</h3>
-
-    <form action="/add" method="post">
-      <input type="text" name="name" placeholder="Add a name">
-      <button type="submit">Add</button>
+    <h3>You've visited this page <%= count %> times</h3>
+    <form action="/update/name" method="post">
+      <input type="text" name="name" placeholder="Name">
     </form>
-
-    <% for(let i = 0; i<friends.length; i++){ %>
-      <p><%= friends[i] %></p>
-    <% } %>
   </body>
 </html>

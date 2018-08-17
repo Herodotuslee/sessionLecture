@@ -2,11 +2,13 @@
 const counter = require("../controllers/counter.js")
 module.exports = function(app){
 
-  app.get('/', counter.index);
+  app.get("/", counter.index);
 
-  app.post('/add', counter.add);
+  app.post("/update/name", counter.updateName);
+
+
   app.use(function(req, res){
 
-    res.send("not found boys");
+    res.send("not found");
   })
 }
