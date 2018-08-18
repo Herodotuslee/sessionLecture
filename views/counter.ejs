@@ -6,8 +6,14 @@
   </head>
   <body>
     <h3>You've visited this page <%= count %> times</h3>
-    <form action="/update/name" method="post">
+    <form action="/add/friend" method="post">
       <input type="text" name="name" placeholder="Name">
+      <button type="submit" name="button">Add</button>
     </form>
+
+    <% for(let i=0; i<friends.length;i++){ %>
+      <p><%= friends[i] %></p>
+
+    <%} %>
   </body>
 </html>

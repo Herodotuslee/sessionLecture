@@ -7,10 +7,15 @@ module.exports = {
     }
     req.session.count ++;
     req.session.save(()=>{
-      res.render("counter", {count: req.session.count});
+      res.render("counter", {count: req.session.count,friends:req.session.friends});
     })
   },
-  updateName: (req, res)=>{
+  addFriend: (req, res)=>{
+
+    req.session.friends.push(req.body.name);
+    req.session.save(()=>{
+      res.redirect("/")
+    })
 
   }
 }

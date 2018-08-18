@@ -4,7 +4,7 @@ module.exports = function(app){
 
   app.get("/", counter.index);
 
-  app.post("/update/name", counter.updateName);
+  app.post("/add/friend", counter.addFriend);
 
 
   app.use(function(req, res){
